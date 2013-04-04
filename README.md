@@ -135,4 +135,12 @@ Vemos en nuestro navegador una aplicación muy sencilla con unos estilos básicos.
 -------------------------------------
 Para poder hacer el despliegue a Heroku, hay que hacer dos configuraciones para que la nube pueda recibirnos el depliegue.
 
-<b>Modificar el archivo</b> 
+<b>Modificar el archivo config/application.rb y agregarle</b> 
+````ruby
+config.assets.initialize_on_precompile=false
+````
+
+<b>Modificar el archivo config/environments/production.rb y modificar</b>
+````ruby
+config.assets.compile = true
+````
