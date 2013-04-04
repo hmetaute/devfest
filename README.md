@@ -37,7 +37,7 @@ Estamos listos, veamos algunos comandos para hacer el despliegue
 ---------------------------------------------------------------
 En primer lugar, debemos inicializar un nuevo repositorio con el comando ```git init```.
 Agregamos los archivos que generamos con ruby con el comando ```git add .```
-Hacemos nuestro primer commit local con el comando ```git commit -m "Este es el mensaje de mi primer commit en git```
+Hacemos nuestro primer commit local con el comando ```git commit -m "Este es el mensaje de mi primer commit en git"```
 Le hacemos saber a Heroku que vamos a enviar una nueva aplicación con el comando ```heroku create```.
 
 !Lanzamiento¡ El primer despliegue
@@ -52,10 +52,13 @@ Nuestra primera visita
 ----------------------
 Podemos desde este momento verificar que nuestra aplicación ya está corriendo en internet y que la aplicación de Rails se creó correctamente con el comando ```heroku open``` que abre el navegador por defecto en el sitio raíz del proyecto.
 
-Ahora a crear valor de negocio
--------------------------------
-Con la prueba de que todos los sistemas funcionan correctamente, podemos hacer un primer bosquejo de la funcionalidad de administrar productos en un inventario.
+Una dependencia para dar algo de estilo
+---------------------------------------
+Antes de comenzar a escribir código de negocio, quiero mostrar una librería que va a ayudarnos a darle algo de estilo a nuestra aplicación.
 
+<b>Twitter Bootstrap</b>
+
+Ryan bates tiene un excelente tutorial sobre esta gema.
 <img width="180" height="35" src="http://oi49.tinypic.com/s5wn05.jpg"></img>
 Instalacion de bootstrap para Rails en [railscasts](http://railscasts.org)
 
@@ -73,10 +76,14 @@ end
 
 Y luego bajamos localmente la dependencia con el comando ```bundle install```
 
+Ahora a crear valor de negocio
+-------------------------------
+Con la prueba de que todos los sistemas funcionan correctamente, podemos hacer un primer bosquejo de la funcionalidad de administrar productos en un inventario.
+
 ¿Scaffolds?
 -----------
-Rails utiliza un modelo de generacion de codigo llamado scaffold. Este generador permite acelerar el desarrollo de CRUDs.
-Creamos el scaffold para un producto muy sencillo con la línea ```rails g scaffold product nombre:string precio:decimal codigo:string cantidad:integer --skip-stylesheets```
+Rails utiliza un modelo de generacion de codigo llamado scaffold (Un scaffold vendría siendo en español el andamiaje que se construye por fuera de una construcción). Este generador permite acelerar el desarrollo de CRUDs.
+Creamos el scaffold para un producto muy sencillo con la línea ```rails g scaffold producto nombre:string precio:decimal codigo:string cantidad:integer --skip-stylesheets```
 
 Luego de esto, tendremos un modelo en la base de datos que debemos aplicar con el comando ```rake db:migrate``` 
 
