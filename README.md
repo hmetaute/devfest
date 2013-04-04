@@ -83,7 +83,7 @@ Con la prueba de que todos los sistemas funcionan correctamente, podemos hacer u
 ¿Scaffolds?
 -----------
 Rails utiliza un modelo de generacion de codigo llamado scaffold (Un scaffold vendría siendo en español el andamiaje que se construye por fuera de una construcción). Este generador permite acelerar el desarrollo de CRUDs.
-Creamos el scaffold para un producto muy sencillo con la línea ```rails g scaffold producto nombre:string precio:decimal codigo:string cantidad:integer --skip-stylesheets```
+Creamos el scaffold para un producto muy sencillo con la línea ```rails g scaffold product name:string price:decimal code:string amount:integer --skip-stylesheets```
 
 Luego de esto, tendremos un modelo en la base de datos que debemos aplicar con el comando ```rake db:migrate``` 
 
