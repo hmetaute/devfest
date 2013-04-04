@@ -128,5 +128,11 @@ Unos toques de estilo
 ---------------------
 Vemos en nuestro navegador una aplicaci髇 muy sencilla con unos estilos b醩icos. Ahora d閙osle un poco m醩 de estructura a la ventana principal del proyecto. Editamos el archivo <b>app/views/layouts/application.html.erb</b> y envolvemos el bloque que contiene la palabra yield de la siguiente manera:
 
-创创rails g bootstrap:layout application fixed创创 Lo que agrega una distribuci髇 a nuestra aplicaci髇.
-创创rails g bootstrap:themed products -f创创 Lo que modifica el estilo de nuestro modelo de producto.
+````rails g bootstrap:layout application fixed```` Lo que agrega una distribuci髇 a nuestra aplicaci髇.
+````rails g bootstrap:themed products -f```` Lo que modifica el estilo de nuestro modelo de producto.
+
+uidado antes de desplegar a Heroku!
+-------------------------------------
+Para poder hacer el despliegue a Heroku, hay que hacer dos configuraciones para que la nube pueda recibirnos el depliegue.
+
+<b>Modificar el archivo</b> 
