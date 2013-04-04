@@ -55,4 +55,11 @@ Podemos desde este momento verificar que nuestra aplicación ya está corriendo en
 Ahora a crear valor de negocio
 -------------------------------
 Con la prueba de que todos los sistemas funcionan correctamente, podemos hacer un primer bosquejo de la funcionalidad de administrar productos en un inventario.
- 
+
+<img width="180" height="35" src="http://oi49.tinypic.com/s5wn05.jpg"></img>
+Instalacion de bootstrap para Rails en [railscasts](http://railscasts.org)
+
+Vamos a agregar la dependencia a una librería de interfaz gráfica para que nuestra aplicación tenga un diseño base
+```group :assets do
+  gem 'twitter-bootstrap-rails'
+end``` 
