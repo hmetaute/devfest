@@ -73,5 +73,8 @@ end
 
 Y luego bajamos localmente la dependencia con el comando ```bundle install```
 
-Modificamos el archivo 
+¿Scaffolds?
+-----------
+Rails utiliza un modelo de generacion de codigo llamado scaffold. Este generador permite acelerar el desarrollo de CRUDs.
+Creamos el scaffold para un producto muy sencillo con la línea ```rails g scaffold product name:string price:decimal --skip-stylesheets``` 
 
