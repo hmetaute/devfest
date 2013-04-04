@@ -133,14 +133,41 @@ Vemos en nuestro navegador una aplicación muy sencilla con unos estilos básicos.
 
 ¡Cuidado antes de desplegar a Heroku!
 -------------------------------------
-Para poder hacer el despliegue a Heroku, hay que hacer dos configuraciones para que la nube pueda recibirnos el depliegue.
+Para poder hacer el despliegue a Heroku, hay que hacer tres configuraciones para que la nube pueda recibirnos el depliegue.
 
 <b>Modificar el archivo config/application.rb y agregarle</b> 
 ````ruby
-config.assets.initialize_on_precompile=false
+config.assets.initialize_on_precompile = false
 ````
 
 <b>Modificar el archivo config/environments/production.rb y modificar</b>
 ````ruby
 config.assets.compile = true
+````
+
+<b>Crear un archivo app/helpers/bootstrap_flash_helper.rb con el siguiente contenido</b>
+````ruby
+module BootstrapFlashHelper
+  ALERT_TYPES = [:error, :info, :success, :warning]
+
+  def bootstrap_flash
+    flash_messages = []
+    flash.each do |type, message|
+      # Skip empty messages, e.g. for devise messages set to nothing in a locale file.
+      next if message.blank?
+      
+      type = :success if type == :notice
+      type = :error   if type == :alert
+      next unless ALERT_TYPES.include?(type)
+
+      Array(message).each do |msg|
+        text = content_tag(:div,
+                           content_tag(:button, raw("&times;"), :class => "close", "data-dismiss" => "alert") +
+                           msg.html_safe, :class => "alert fade in alert-#{type}")
+        flash_messages << text if message
+      end
+    end
+    flash_messages.join("\n").html_safe
+  end
+end
 ````
