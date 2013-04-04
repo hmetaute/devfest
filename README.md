@@ -63,4 +63,5 @@ Vamos a agregar la dependencia a una librería de interfaz gráfica para que nuest
 ```ruby 
 group :assets do
   gem 'twitter-bootstrap-rails'
-end``` 
+end
+``` 
