@@ -1,6 +1,5 @@
 #Archivos que no se mandan a git
 *~
-*.lock
 db/*.sqlite3
 config/database.yml
 log/*

@@ -107,3 +107,8 @@ Podemos ver lo que acabamos de hacer en la aplicacion luego de que la consola co
 Volvemos a Bootstrap: instalación de los css de la aplicación
 -------------------------------------------------------------
 Para sacar provecho de la gema de estilos bootstrap, corremos este comando para que nuestra aplicación reciba los estilos para mejorar su presentación: ```rails g bootstrap:install``` 
+
+Instalemos esto en heroku
+-------------------------
+Debemos hacer commit a heroku de todo lo que hicimos con el comando ````git push heroku master````
+Luego de esto, corremos el cambio de base de datos en Heroku con el comando ````heroku run rake db:migrate````
