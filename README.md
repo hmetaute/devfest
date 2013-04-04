@@ -97,3 +97,9 @@ development:
   pool: 5
   timeout: 5000
 ```
+
+Probando lo que acabamos de hacer: Gratificación instantánea
+------------------------------------------------------------
+Luego de haber corrido correctamente la migración de la base de datos, podemos correr un servidor local y ver nuestra aplicación con el comando ```rails server```
+Podemos ver lo que acabamos de hacer en la aplicacion luego de que la consola corra correctamente este comando en la dirección ```http://localhost:3000/products```
+¡Ya tenemos un CRUD que persiste correctamente en la base de datos!

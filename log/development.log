@@ -15,3 +15,36 @@ Migrating to CreateProducts (20130404041205)
   [1m[35m (0.3ms)[0m  select sqlite_version(*)
   [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
   [1m[35m (0.0ms)[0m  PRAGMA index_list("products")
+
+
+Started GET "/products" for 127.0.0.1 at 2013-04-03 23:27:02 -0500
+Connecting to database specified by database.yml
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.5ms)[0m  [1mSELECT "products".* FROM "products" [0m
+  Rendered products/index.html.erb within layouts/application (5.5ms)
+Compiled application.css  (1ms)  (pid 7674)
+Compiled jquery.js  (3ms)  (pid 7674)
+Compiled jquery_ujs.js  (0ms)  (pid 7674)
+Compiled products.js  (167ms)  (pid 7674)
+Compiled application.js  (247ms)  (pid 7674)
+Completed 200 OK in 442ms (Views: 372.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-03 23:27:03 -0500
+Served asset /jquery.js - 200 OK (27ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-03 23:27:03 -0500
+Served asset /application.css - 200 OK (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-03 23:27:03 -0500
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2013-04-03 23:27:03 -0500
+Served asset /products.js - 200 OK (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-03 23:27:03 -0500
+Served asset /application.js - 200 OK (23ms)
