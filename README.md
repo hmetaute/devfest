@@ -128,8 +128,5 @@ Unos toques de estilo
 ---------------------
 Vemos en nuestro navegador una aplicaci髇 muy sencilla con unos estilos b醩icos. Ahora d閙osle un poco m醩 de estructura a la ventana principal del proyecto. Editamos el archivo <b>app/views/layouts/application.html.erb</b> y envolvemos el bloque que contiene la palabra yield de la siguiente manera:
 
-创创html
-<div class="container">
- <%= yield %>
-</div>
-创创
+创创rails g bootstrap:layout application fixed创创 Lo que agrega una distribuci髇 a nuestra aplicaci髇.
+创创rails g bootstrap:themed products -f创创 Lo que modifica el estilo de nuestro modelo de producto.
