@@ -59,9 +59,13 @@ Con la prueba de que todos los sistemas funcionan correctamente, podemos hacer u
 <img width="180" height="35" src="http://oi49.tinypic.com/s5wn05.jpg"></img>
 Instalacion de bootstrap para Rails en [railscasts](http://railscasts.org)
 
-Vamos a agregar la dependencia a una librería de interfaz gráfica para que nuestra aplicación tenga un diseño base modificando el archivo en el que se manejan las dependencias: <b>Bundle</b>
+Vamos a agregar la dependencia a una librería de interfaz gráfica para que nuestra aplicación tenga un diseño base.
+En este caso, queremos usar la ayuda de [twitter bootstrap](http://twitter.github.com/bootstrap/) y agregamos las funciones que nos provee para interfaz modificando el archivo en el que se manejan las dependencias: <b>Bundle</b>
 ```ruby 
 group :assets do
   gem 'twitter-bootstrap-rails'
 end
 ``` 
+
+Y luego bajamos localmente la dependencia con el comando ```bundle install```
+
