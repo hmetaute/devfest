@@ -11,4 +11,4 @@ Como entrega de la primera iteración se entrega una aplicación con funcionalidad
 Creando una nueva aplicación
 ---------------------------
 
-Luego de seguir los [pasos para configurar rails](http://guides.rubyonrails.org/getting_started.html) se crea la primera versión de la aplicación con el comando: ''''rails new app_inventario''''
+Luego de seguir los [pasos para configurar rails](http://guides.rubyonrails.org/getting_started.html) se crea la primera versión de la aplicación con el comando: ```rails new app_inventario```
