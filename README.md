@@ -24,4 +24,35 @@ Hasta este momento tenemos una aplicación desplegable. Podemos hacer desde este 
 
 Les presento a Heroku
 ---------------------
-Para hacer nuestro primer despliegue debemos [configurar una cuenta gratuita en Heroku](https://id.heroku.com/signup) e [instalar el conjunto de herramientas de Heroku](https://toolbelt.heroku.com)
+Para hacer nuestro primer despliegue debemos [configurar una cuenta gratuita en Heroku](https://id.heroku.com/signup) e [instalar el conjunto de herramientas de Heroku](https://toolbelt.heroku.com).
+Luego de hacer esto, iniciamos la interaccion con heroku y relacionamos nuestra nueva cuenta con el comando ```heroku login```
+
+Se nos solicitará el ingreso de nuestro correo y contraseña y estaremos listos para desplegar nuestra nueva aplicación.
+
+Necesitamos control de versiones. Repositorio Git sobre Github
+--------------------------------------------------------------
+Debemos [instalar un cliente de git en el caso windows](https://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git) y [crear una cuenta en github](https://github.com/signup/free) para [acceder a un nuevo repositorio](https://help.github.com/articles/creating-a-new-repository).
+
+Estamos listos, veamos algunos comandos para hacer el despliegue
+---------------------------------------------------------------
+En primer lugar, debemos inicializar un nuevo repositorio con el comando ```git init```.
+Agregamos los archivos que generamos con ruby con el comando ```git add .```
+Hacemos nuestro primer commit local con el comando ```git commit -m "Este es el mensaje de mi primer commit en git```
+Le hacemos saber a Heroku que vamos a enviar una nueva aplicación con el comando ```heroku create```.
+
+!Lanzamiento¡ El primer despliegue
+------------------------------------
+Estamos listos para subir nuestra aplicación a Heroku. Corremos el comando ```git push heroku master``` que envía la aplicación que acabamos de crear a heroku para almacenamiento en control de versiones y despliegue en vivo en internet.
+
+¿Dynos?
+-------
+Heroku maneja un concepto de unidad de procesamiento y memoria para nuestra aplicación llamada Dyno. Con el siguiente comando nos aseguramos de asignar uno de estos para que reciba, instale y corra nuestra nueva aplicación: ```heroku ps:scale web=1```.
+
+Nuestra primera visita
+----------------------
+Podemos desde este momento verificar que nuestra aplicación ya está corriendo en internet y que la aplicación de Rails se creó correctamente con el comando ```heroku open``` que abre el navegador por defecto en el sitio raíz del proyecto.
+
+Ahora a crear valor de negocio
+-------------------------------
+Con la prueba de que todos los sistemas funcionan correctamente, podemos hacer un primer bosquejo de la funcionalidad de administrar productos en un inventario.
+ 
