@@ -91,7 +91,7 @@ Para encontrar más información sobre qué tipos de datos podemos configurar sobre
 
 Nota de configuración
 ----------------------
-Si queremos trabajar localmente con sqlite3 y en heroku con postgres, debemos tener un bloque como el siguiente en el archivo <b>Gemfile</b>
+Si queremos trabajar localmente con sqlite3 y en Heroku con Postgres, debemos tener un bloque como el siguiente en el archivo <b>Gemfile</b>
 ```ruby
 group :development do
     gem 'sqlite3'
@@ -107,6 +107,8 @@ development:
   timeout: 5000
 ```
 
+No debemos versionar en git ninguno de estos archivos ya que son de configuración local
+
 Probando lo que acabamos de hacer: Gratificación instantánea
 ------------------------------------------------------------
 Luego de haber corrido correctamente la migración de la base de datos, podemos correr un servidor local y ver nuestra aplicación con el comando ```rails server```
@@ -121,3 +123,13 @@ Instalemos esto en heroku
 -------------------------
 Debemos hacer commit a heroku de todo lo que hicimos con el comando ````git push heroku master````
 Luego de esto, corremos el cambio de base de datos en Heroku con el comando ````heroku run rake db:migrate````
+
+Unos toques de estilo
+---------------------
+Vemos en nuestro navegador una aplicación muy sencilla con unos estilos básicos. Ahora démosle un poco más de estructura a la ventana principal del proyecto. Editamos el archivo <b>app/views/layouts/application.html.erb</b> y envolvemos el bloque que contiene la palabra yield de la siguiente manera:
+
+´´´´html
+<div class="container">
+ <%= yield %>
+</div>
+´´´´
