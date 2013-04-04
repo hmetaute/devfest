@@ -3,7 +3,7 @@ Manejo de inventario
 
 Un cliente le ha comunicado que tiene una necesidad de crear un manejo de inventario con control de acceso a usuarios.
 El cliente tiene varios locales esparcidos por la ciudad en los que quiere controlar las entradas y salidas de productos y resulta difícil conectar las tiendas en una red local por la distancia entre ellas.
-Se decide recomendarle al cliente proveer acceso a internet en cada tienda y que el acceso al software se haga por web y con la propuesta de que el cliente pague por la cantidad de usuarios y productos que registre en el inventario que soporta el sistema.
+Se decide recomendarle al cliente proveer acceso a internet en cada tienda y que el acceso al software se haga por web; además se le propone que pague por la cantidad de usuarios y productos que registre en el inventario que soporta el sistema.
 
 A continuación se muestra cómo responder a esta necesidad con rapidez para que el cliente reciba con prontitud una versión utilizable del programa de manejo de inventario.
 Como entrega de la primera iteración se entrega una aplicación con funcionalidad rudimentaria pero que cumple con la funcionalidad que más prioridad tiene para el cliente.
@@ -76,9 +76,11 @@ Y luego bajamos localmente la dependencia con el comando ```bundle install```
 ¿Scaffolds?
 -----------
 Rails utiliza un modelo de generacion de codigo llamado scaffold. Este generador permite acelerar el desarrollo de CRUDs.
-Creamos el scaffold para un producto muy sencillo con la línea ```rails g scaffold product name:string price:decimal --skip-stylesheets```
+Creamos el scaffold para un producto muy sencillo con la línea ```rails g scaffold product nombre:string precio:decimal codigo:string cantidad:integer --skip-stylesheets```
 
 Luego de esto, tendremos un modelo en la base de datos que debemos aplicar con el comando ```rake db:migrate``` 
+
+Para encontrar más información sobre qué tipos de datos podemos configurar sobre un scaffold, podemos referirnos a [esta página](http://overooped.com/post/100354794/ruby-script-generate-scaffold-types)
 
 Nota de configuración
 ----------------------
