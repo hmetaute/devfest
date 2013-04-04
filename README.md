@@ -177,3 +177,7 @@ end
 Agregamos los cambios de los archivos que modificamos con el comando ````git add .````
 Hacemos un comit al repositorio <b>local</b> de lo que acabamos de modificar con el comando ````git commit -m "Se agregan layouts y se mejora modelo de producto"````
 Finalmente, desplegamos a Heroku con el comando ````git push heroku master````
+
+Cambios a lo que nos generaron
+------------------------------
+Muchos de los enlaces que nos generan no nos sirven. Hay que modificar el nombre de la empresa y eliminar los enlaces dentro del archivo <b>app/views/layouts/application.html.erb</b>
