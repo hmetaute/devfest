@@ -80,3 +80,20 @@ Creamos el scaffold para un producto muy sencillo con la línea ```rails g scaffo
 
 Luego de esto, tendremos un modelo en la base de datos que debemos aplicar con el comando ```rake db:migrate``` 
 
+Nota de configuración
+----------------------
+Si queremos trabajar localmente con sqlite3 y en heroku con postgres, debemos tener un bloque como el siguiente en el archivo <b>Gemfile</b>
+```ruby
+group :development do
+    gem 'sqlite3'
+    gem 'sqlite3-ruby'	   
+end 
+```
+Además de esto, debemos tener en el archivo <b>configuration/database.yml</b>
+```yaml
+development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+  pool: 5
+  timeout: 5000
+```
